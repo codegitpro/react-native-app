@@ -1,7 +1,7 @@
 import React from "react";
-import { View, Button, StyleSheet, TouchableOpacity, Text } from "react-native";
+import { StyleSheet, TouchableOpacity, Text } from "react-native";
 
-const FormButton = ({ onPress, title, size, backgroundColor, color }) => (
+const FormButton = ({ onPress, title, size, backgroundColor, color, icon }) => (
   <TouchableOpacity
     onPress={onPress}
     style={[
@@ -21,6 +21,7 @@ const FormButton = ({ onPress, title, size, backgroundColor, color }) => (
         color && { color },
       ]}
     >
+      {icon}
       {title}
     </Text>
   </TouchableOpacity>

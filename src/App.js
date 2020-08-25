@@ -1,9 +1,20 @@
 import React, { Component } from "react";
 import { Button, Image, StyleSheet, Text, View } from "react-native";
-import { FormButton } from "./components";
+import { FormButton, PlusIcon } from "./components";
 import logo from "./assets/img/logo.svg";
 
 class App extends Component {
+  constructor() {
+    super();
+    // this.handleLogin = this.handleLogin.bind(this);
+    // this.handleReport = this.handhandleReportleLogin.bind(this);
+  }
+  // handleReport() {
+  //   console.log("click report button");
+  // }
+  // handleLogin() {
+  //   console.log("click login button");
+  // }
   render() {
     return (
       <View style={styles.app}>
@@ -22,12 +33,15 @@ class App extends Component {
           size="sm"
           backgroundColor="#FFFFFF"
           color="#585A5C"
+          icon={<PlusIcon />}
+          // onPress={this.handleReport}
         />
         <FormButton
           title="Login"
           size="sm"
           backgroundColor="#F7B124"
           color="white"
+          // onPress={this.handleLogin}
         />
       </View>
     );
@@ -52,7 +66,7 @@ const styles = StyleSheet.create({
     fontFamily: "Arial Hebrew Scholar",
     fontSize: "1.5rem",
     marginTop: 100,
-    marginBottom: 100,
+    marginBottom: 80,
     marginVertical: "1em",
     textAlign: "center",
     color: "#737171",
