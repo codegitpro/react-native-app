@@ -1,7 +1,7 @@
 import React, { Component } from "react";
-import { Alert, Button, Image, StyleSheet, Text, View } from "react-native";
-import logo from './assets/img/logo.svg'
-
+import { Button, Image, StyleSheet, Text, View } from "react-native";
+import { FormButton } from "./components";
+import logo from "./assets/img/logo.svg";
 
 class App extends Component {
   render() {
@@ -16,25 +16,19 @@ class App extends Component {
           />
           <Text style={styles.title}>Welcome to MYLO</Text>
         </View>
-        {/* <Text style={styles.text}>
-          This is an example of an app built with{" "}
-          <Link href="https://github.com/facebook/create-react-app">
-            Create React App
-          </Link>{" "}
-          and{" "}
-          <Link href="https://github.com/necolas/react-native-web">
-            React Native for Web
-          </Link>
-        </Text>
-        <Text style={styles.text}>
-          To get started, edit{" "}
-          <Link href="https://codesandbox.io/s/q4qymyp2l6/" style={styles.code}>
-            src/App.js
-          </Link>
-          .
-        </Text> */}
-        <Button style={styles.formButton} onPress={() => Alert.alert('Instant Fault Report')} title="Instant Fault Report" />
-        <Button color="#f194ff" onPress={() => Alert.alert('Need login API')} title="Login" />
+
+        <FormButton
+          title="Instant Fault Report"
+          size="sm"
+          backgroundColor="#FFFFFF"
+          color="#585A5C"
+        />
+        <FormButton
+          title="Login"
+          size="sm"
+          backgroundColor="#F7B124"
+          color="white"
+        />
       </View>
     );
   }
@@ -43,36 +37,38 @@ class App extends Component {
 const styles = StyleSheet.create({
   app: {
     marginHorizontal: "auto",
-    maxWidth: 500
+    maxWidth: 500,
   },
   logo: {
-    height: 80
+    margin: "auto",
+    width: 124,
+    height: 42,
   },
   header: {
-    padding: 20
+    padding: 20,
   },
   title: {
     fontWeight: "bold",
+    fontFamily: "Arial Hebrew Scholar",
     fontSize: "1.5rem",
+    marginTop: 100,
+    marginBottom: 100,
     marginVertical: "1em",
-    textAlign: "center"
+    textAlign: "center",
+    color: "#737171",
   },
   text: {
     lineHeight: "1.5em",
     fontSize: "1.125rem",
     marginVertical: "1em",
-    textAlign: "center"
+    textAlign: "center",
   },
   link: {
-    color: "#1B95E0"
+    color: "#1B95E0",
   },
   code: {
-    fontFamily: "monospace, monospace"
+    fontFamily: "monospace, monospace",
   },
-  formButton: {
-    color: "black",
-    marginBottom: "2rem"
-  }
 });
 
 export default App;
